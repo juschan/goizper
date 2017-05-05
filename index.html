@@ -15,6 +15,7 @@
     <link href="./css/style.css" rel="stylesheet">
 
     <link href="./css/font-awesome.css" rel="stylesheet">
+
   </head>
 
   <body>
@@ -44,8 +45,35 @@
 
     <!--Jumbotron section-->
     <section>
-
+      <div class="container"> 
+        <div class="jumbotron">
+          <h1>Goizer Asia</h1>
+          <p>The sprayer specialists</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#myModal" >See our IK sprayers used for sanitation against Ebola</a></p>
+        </div>
+      </div>
     </section>
+
+    <!--Modal with showcase of IK Sprayer-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">IK sprayers used for sanitation against Ebola</h4>
+            
+          </div>
+          <div class="modal-body">
+            <iframe id="myPlayer" width="560" height="315" src="https://www.youtube.com/embed/dVPF3SO0trU?start=323&rel=0&wmode=Opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+            <p>See clip at 5:25</p>
+          </div>
+          <div class="modal-footer">
+            <button id="stopPlayer" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 
     <!--About section-->
     <section id="about">
@@ -175,5 +203,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="./js/bootstrap.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+        $('#stopPlayer').on('click', function(){
+          var video = $("#myPlayer").prop('src');
+          $("#myPlayer").prop('src','');
+          $("#myPlayer").prop('src',video);
+        });
+      });
+    </script>
+
   </body>
 </html>
