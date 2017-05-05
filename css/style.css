@@ -2,8 +2,18 @@ body {
   padding-top: 50px;
 }
 
+.jumbotron {
+background-image: url("../img/background.png");
+background-size: cover;
+color:#fff;
+}
+
 section{
   padding: 15px 0px 15px 0px;
+}
+
+.img-responsive{
+  margin: 0 auto !important;
 }
 
 footer{
